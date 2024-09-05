@@ -11,8 +11,8 @@ contract AclToken is ERC20("Tear ACL", "Acl") {
         _mint(msg.sender, initialSupply);
     }
 
-    function mint(address to, uint256 amount) external {
+    function mint(address _to, uint256 _amount) external {
         require(msg.sender == owner, "Access denied");
-        _mint(to, amount);
+        _mint(_to, _amount);
     }
 }
